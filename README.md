@@ -14,18 +14,18 @@ Installation
 In you project
 
 ```sh
-composer require krowinski/php-mysql-replication
+composer require smakecloud/php-mysql-replication
 ```
 
-or standalone 
+or standalone
 
 ```sh
-git clone https://github.com/krowinski/php-mysql-replication.git
+git clone https://github.com/florianoversmake/php-mysql-replication.git
 
 composer install -o
 ```
 
-Compatibility (based on integration tests) 
+Compatibility (based on integration tests)
 =========
 PHP
 
@@ -90,16 +90,16 @@ Available options:
 
 'binLogFileName' - bin log file name to start from
 
-'binLogPosition' - bin log position to start from 
+'binLogPosition' - bin log position to start from
 
 'eventsOnly' - array  to listen on events (full list in [ConstEventType.php](https://github.com/krowinski/php-mysql-replication/blob/master/src/MySQLReplication/Definitions/ConstEventType.php) file)
 
-'eventsIgnore' - array to ignore events (full list in [ConstEventType.php](https://github.com/krowinski/php-mysql-replication/blob/master/src/MySQLReplication/Definitions/ConstEventType.php) file) 
+'eventsIgnore' - array to ignore events (full list in [ConstEventType.php](https://github.com/krowinski/php-mysql-replication/blob/master/src/MySQLReplication/Definitions/ConstEventType.php) file)
 
-'tablesOnly' - array to only listen on given tables (default all tables) 
+'tablesOnly' - array to only listen on given tables (default all tables)
 
-'databasesOnly' - array to only listen on given databases (default all databases) 
- 
+'databasesOnly' - array to only listen on given databases (default all databases)
+
 'tableCacheSize' - some data are collected from information schema, this data is cached.
 
 'custom' - if some params must be set in extended/implemented own classes
@@ -153,7 +153,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Log position: 0
     Event size: 116
     Memory usage 2.4 MB
-    
+
     === Event gtid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803092
@@ -161,7 +161,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Commit: true
     GTID NEXT: 3403c535-624f-11e7-9940-0800275713ee:13675
     Memory usage 2.42 MB
-    
+
     === Event query ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803237
@@ -170,7 +170,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Execution time: 0
     Query: CREATE DATABASE php_mysql_replication
     Memory usage 2.45 MB
-    
+
     === Event gtid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803285
@@ -178,7 +178,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Commit: true
     GTID NEXT: 3403c535-624f-11e7-9940-0800275713ee:13676
     Memory usage 2.45 MB
-    
+
     === Event query ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803500
@@ -187,7 +187,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Execution time: 0
     Query: CREATE TABLE test4 (id int NOT NULL AUTO_INCREMENT, data VARCHAR(255), data2 VARCHAR(255), PRIMARY KEY(id))
     Memory usage 2.45 MB
-    
+
     === Event gtid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803548
@@ -195,7 +195,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Commit: true
     GTID NEXT: 3403c535-624f-11e7-9940-0800275713ee:13677
     Memory usage 2.45 MB
-    
+
     === Event query ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803637
@@ -204,7 +204,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Execution time: 0
     Query: BEGIN
     Memory usage 2.45 MB
-    
+
     === Event tableMap ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803708
@@ -214,7 +214,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Table Id: 866
     Columns amount: 3
     Memory usage 2.71 MB
-    
+
     === Event write ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803762
@@ -230,18 +230,18 @@ Output will be similar to this (depends on configuration for example GTID off/on
                 [data] => Hello
                 [data2] => World
             )
-    
+
     )
-    
+
     Memory usage 2.74 MB
-    
+
     === Event xid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803793
     Event size: 31
     Transaction ID: 662802
     Memory usage 2.75 MB
-    
+
     === Event gtid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803841
@@ -249,7 +249,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Commit: true
     GTID NEXT: 3403c535-624f-11e7-9940-0800275713ee:13678
     Memory usage 2.75 MB
-    
+
     === Event query ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57803930
@@ -258,7 +258,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Execution time: 0
     Query: BEGIN
     Memory usage 2.76 MB
-    
+
     === Event tableMap ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804001
@@ -268,7 +268,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Table Id: 866
     Columns amount: 3
     Memory usage 2.75 MB
-    
+
     === Event update ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804075
@@ -286,27 +286,27 @@ Output will be similar to this (depends on configuration for example GTID off/on
                         [data] => Hello
                         [data2] => World
                     )
-    
+
                 [after] => Array
                     (
                         [id] => 1
                         [data] => World
                         [data2] => Hello
                     )
-    
+
             )
-    
+
     )
-    
+
     Memory usage 2.76 MB
-    
+
     === Event xid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804106
     Event size: 31
     Transaction ID: 662803
     Memory usage 2.76 MB
-    
+
     === Event gtid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804154
@@ -314,7 +314,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Commit: true
     GTID NEXT: 3403c535-624f-11e7-9940-0800275713ee:13679
     Memory usage 2.76 MB
-    
+
     === Event query ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804243
@@ -323,7 +323,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Execution time: 0
     Query: BEGIN
     Memory usage 2.76 MB
-    
+
     === Event tableMap ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804314
@@ -333,7 +333,7 @@ Output will be similar to this (depends on configuration for example GTID off/on
     Table Id: 866
     Columns amount: 3
     Memory usage 2.76 MB
-    
+
     === Event delete ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804368
@@ -349,11 +349,11 @@ Output will be similar to this (depends on configuration for example GTID off/on
                 [data] => World
                 [data2] => Hello
             )
-    
+
     )
-    
+
     Memory usage 2.77 MB
-    
+
     === Event xid ===
     Date: 2017-07-06T15:23:44+00:00
     Log position: 57804399
@@ -422,19 +422,19 @@ duplicates.
 5. ### How much its give overhead to MYSQL server ?
 
 It work like any other MYSQL in slave mode and its giving same overhead.
- 
+
 6. ### Socket timeouts error
 
 To fix this best is to increase db configurations ```net_read_timeout``` and ```net_write_timeout``` to 3600.  (tx Bijimon)
- 
+
 7. ### Partial updates fix
 
 Set in my.conf ```binlog_row_image=full``` to fix receiving only partial updates.
 
-8. ### No replication events when connected to replica server   
+8. ### No replication events when connected to replica server
 Set in my.conf ```log_slave_updates=on``` to fix this (#71)(#66)
 
 9. ### "Big" updates / inserts
 Default MYSQL setting generates one big blob of stream this require more RAM/CPU you can change this for smaller stream using
 variable ```binlog_row_event_max_size``` [https://dev.mysql.com/doc/refman/8.0/en/replication-options-binary-log.html#sysvar_binlog_row_event_max_size]  to
-split into smaller chunks 
+split into smaller chunks
