@@ -17,9 +17,9 @@
     "ext-json": "*",
     "ext-sockets": "*",
     "doctrine/collections": "^2.1",
-    "doctrine/dbal": "^3.8",
+    "doctrine/dbal": "^3.9",
     "psr/log": "^3.0",
-    "psr/simple-cache": "^3.0",
+    "psr/simple-cache": "^1.0 || ^2.0 || ^3.0",
     "symfony/event-dispatcher": "^6.0|^7.0"
   },
   "require-dev": {
